@@ -12,6 +12,10 @@ RUN tar -xjf /opt/firefox.tar.bz2 -C /opt/ \
 	&& ln -s /opt/firefox/firefox /usr/local/bin/firefox \
 	&& su user -c 'mkdir -p /home/user/Downloads/'
 
+RUN sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list \
+	&& apt-get update && apt-get install -y --no-install-recommends \
+		flashplugin-installer
+
 RUN rm -rf /var/lib/apt/lists/* && rm /opt/firefox.tar.bz2
 
 ENTRYPOINT [ "su", "user", "-c" ]
