@@ -19,7 +19,9 @@ RUN sed -i 's/^#\s*\(deb.*multiverse\)$/\1/g' /etc/apt/sources.list \
 	&& apt-get update && apt-get install -y --no-install-recommends \
 		flashplugin-installer
 
-RUN rm -rf /var/lib/apt/lists/* && rm firefox.tar.bz2
+RUN rm -rf /var/lib/apt/lists/* \
+	&& rm firefox.tar.bz2 \
+	&& rm SHA512SUM
 
 USER user
-CMD [ "firefox" ]
+CMD [ "firefox", "--no-remote", "--setDefaultBrowser" ]
