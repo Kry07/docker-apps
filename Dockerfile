@@ -15,7 +15,9 @@ RUN set -ex \
 	&& ln -s /opt/firefox/firefox /usr/local/bin/firefox \
 	&& su user -c 'mkdir -p /home/user/Downloads/'
 
-RUN rm -rf /var/lib/apt/lists/* && rm firefox.tar.bz2
+RUN rm -rf /var/lib/apt/lists/* \
+	&& rm firefox.tar.bz2 \
+	&& rm SHA512SUM
 
 USER user
-CMD [ "firefox" ]
+CMD [ "firefox", "--no-remote", "--setDefaultBrowser" ]
