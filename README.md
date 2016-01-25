@@ -1,16 +1,9 @@
 # docker-apps
-docker applications based on kry07/xorg
+docker applications based on [kry07/xorg](https://github.com/Kry07/docker-xorg).
 
-Each branch is one Applicaion
+Each branch is one applicaion.
 
- - firefox with pulseaudio
- - firefox-flash with pulseaudio and flashplayer
+ - [firefox with pulseaudio](https://github.com/Kry07/docker-apps/tree/firefox)
+ - [firefox-flash with pulseaudio and flashplayer](https://github.com/Kry07/docker-apps/tree/firefox-flash)
 
-```
-$ xhost +si:localuser:$USER
-$ docker run -name=firefox \
-	-v $HOME/.config/pulse/cookie:/home/user/.config/pulse/cookie:ro \
-	-v $HOME/Downloads:/home/user/Downloads \
-	kry07/firefox "$@"
-```
-
+Licensed under [MIT License](LICENSE)
