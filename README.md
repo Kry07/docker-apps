@@ -5,6 +5,7 @@ Each branch is one applicaion.
 
  - [firefox with pulseaudio](https://github.com/Kry07/docker-apps/tree/firefox)
  - [firefox-flash with pulseaudio and flashplayer](https://github.com/Kry07/docker-apps/tree/firefox-flash)
+ - [handbrake-gtk](https://github.com/Kry07/docker-apps/tree/handbrake-gtk)
 
 ### run Firefox
 ```
