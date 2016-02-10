@@ -8,7 +8,7 @@ RUN set -ex \
 	&& echo "deb http://ppa.launchpad.net/stebbins/handbrake-releases/ubuntu trusty main" >> /etc/apt/sources.list \
 	&& apt-key adv --keyserver keyserver.ubuntu.com --recv-key "$GPG_KEY" \
 	&& apt-get update && apt-get install -y --no-install-recommends \
-		gnome-icon-theme librsvg2-common libdbus-glib-1-2 libnotify4 handbrake-gtk 
+		librsvg2-common libdbus-glib-1-2 libnotify4 handbrake-gtk 
 
 RUN rm -rf /var/lib/apt/lists/*
 
