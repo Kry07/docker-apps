@@ -1,19 +1,18 @@
-# docker-apps
-docker applications based on [kry07/xorg](https://github.com/Kry07/docker-xorg).
+#### Installation
 
-Each branch is one applicaion.
-
- - [firefox with pulseaudio](https://github.com/Kry07/docker-apps/tree/firefox)
- - [firefox-flash with pulseaudio and flashplayer](https://github.com/Kry07/docker-apps/tree/firefox-flash)
- - [handbrake-gtk](https://github.com/Kry07/docker-apps/tree/handbrake-gtk)
+##### How to get this Container
+```
+docker pull kry07/handbrake
+```
 
 ### run Handbrake
 ```
 xhost +si:localuser:$USER
-docker run --name=firefox-run \
+docker run --rm \
+		--device=/dev/sr0 \
         -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-        -v $HOME/Downloads:/home/user/Downloads \
-        kry07/ghb "$@"
+		-v $HOME/Videos:/home/user/Videos \
+		kry07/handbrake "$@"
 ```
 
 ### copy Handbrake into your system
@@ -21,8 +20,7 @@ docker run --name=firefox-run \
 mkdir -p $HOME/.local/share/applications/
 mkdir -p $HOME/.local/share/icons/ 
 cp ./ghb.desktop $HOME/.local/share/applications/
-docker run --name=getIcon kry07/ghb sh
+docker run --name=getIcon kry07/handbrake sh
 docker cp getIcon:/usr/share/icons/hicolor/scalable/apps/hb-icon.svg $HOME/.local/share/icons/
 docker rm getIcon 
 ```
-Licensed under [MIT License](LICENSE)
