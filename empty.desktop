@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=
+GenericName=
+Comment=
+Exec=xhost +si:localuser:$USER && docker run -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $HOME:/home/user $empty
+Icon=
+Terminal=false
+Type=Application
+Categories=
+MimeType=
