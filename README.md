@@ -1,11 +1,11 @@
-#### Installation
+##### Installation
 
-##### How to get this Container
+#### How to get this Container
 ```
 docker pull kry07/firefox
 ```
 
-### run Firefox
+#### run Firefox
 ```
 xhost +si:localuser:$USER
 docker run --rm \
@@ -15,7 +15,7 @@ docker run --rm \
 	kry07/firefox "$@"
 ```
 
-### copy Firefox into your system
+#### copy Firefox into your system
 ```
 mkdir -p $HOME/.local/share/applications/
 mkdir -p $HOME/.local/share/icons/ 
