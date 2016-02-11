@@ -1,11 +1,11 @@
-#### Installation
+##### Installation
 
-##### How to get this Container
+#### How to get this Container
 ```
 docker pull kry07/handbrake
 ```
 
-### run Handbrake
+#### run Handbrake
 ```
 xhost +si:localuser:$USER
 docker run --rm \
@@ -15,7 +15,7 @@ docker run --rm \
 		kry07/handbrake "$@"
 ```
 
-### copy Handbrake into your system
+#### copy Handbrake into your system
 ```
 mkdir -p $HOME/.local/share/applications/
 mkdir -p $HOME/.local/share/icons/ 
