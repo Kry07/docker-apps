@@ -9,9 +9,11 @@ docker pull kry07/none
 ```
 xhost +si:localuser:$USER
 docker run --rm \
-        -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-		-v $HOME:/home/user \
-		kry07/none "$@"
+	--device=/dev/sr0 \
+	-v /tmp/.X11-unix:/tmp/.X11-unix:ro \
+	-v $HOME/.config/pulse/cookie:/home/user/.config/pulse/cookie:ro \
+	-v $HOME:/home/user \
+	kry07/none "$@"
 ```
 
 #### copy none into your system

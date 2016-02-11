@@ -3,7 +3,7 @@
 Name=
 GenericName=
 Comment=
-Exec=xhost +si:localuser:$USER && docker run -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $HOME:/home/user $empty
+Exec=xhost +si:localuser:$USER && docker run --rm --device=/dev/sr0 -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $HOME/.config/pulse/cookie:/home/user/.config/pulse/cookie:ro -v $HOME:/home/user kry07/none
 Icon=
 Terminal=false
 Type=Application
