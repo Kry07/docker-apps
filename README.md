@@ -9,10 +9,10 @@ docker pull kry07/handbrake
 ```
 xhost +si:localuser:$USER
 docker run --rm \
-		--device=/dev/sr0 \
-        -v /tmp/.X11-unix:/tmp/.X11-unix:ro \
-		-v $HOME/Videos:/home/user/Videos \
-		kry07/handbrake "$@"
+	--device=/dev/sr0 \
+	--volume /tmp/.X11-unix:/tmp/.X11-unix:ro \
+	--volume $HOME/Videos:/home/user/Videos \
+	kry07/handbrake "$@"
 ```
 
 #### copy Handbrake into your system
