@@ -1,0 +1,14 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Thunderbird Mail
+Comment=Send and receive mail with Thunderbird
+GenericName=Mail Client
+Keywords=Email;E-mail;Newsgroup;Feed;RSS
+Exec=xhost +si:localuser:$USER && docker run --rm --env TZ=Europe/Vienna --volume /tmp/.X11-unix:/tmp/.X11-unix --volume /home/etc/thunderbird:/home/user/.thunderbird --volume $HOME/Desktop:/home/user/Desktop kry07/thunderbird %u
+Terminal=false
+X-MultipleArgs=false
+Type=Application
+Icon=thunderbird
+Categories=Application;Network;Email;
+MimeType=x-scheme-handler/mailto;application/x-xpinstall;
+StartupNotify=false
