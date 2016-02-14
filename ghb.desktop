@@ -3,7 +3,7 @@
 Name=HandBrake
 GenericName=Media Transcoder
 Comment=Transcodes DVD, Bluray, and other media
-Exec=xhost +si:localuser:$USER && docker run -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $HOME/Videos:/home/user/Videos --device=/dev/sr0 kry07/ghb ghb %f
+Exec=ghb.sh
 Icon=hb-icon
 Terminal=false
 Type=Application
