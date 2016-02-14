@@ -20,4 +20,4 @@ RUN rm -rf /var/lib/apt/lists/* \
 	&& rm SHA512SUM
 
 USER user
-CMD [ "firefox", "--no-remote", "--setDefaultBrowser" ]
+CMD [ "firefox", "--setDefaultBrowser" ]
