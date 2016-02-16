@@ -1,9 +1,9 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Version=1.0
-Name=Firefox Web Browser
+Name=Firefox Web Flash Browser
 Comment=Browse the World Wide Web
-GenericName=Web Browser
+GenericName=Web Flash Browser
 Keywords=Internet;WWW;Browser;Web;Explorer
 Exec=xhost +si:localuser:$USER && docker run -v /tmp/.X11-unix:/tmp/.X11-unix:ro -v $HOME/.config/pulse/cookie:/home/user/.config/pulse/cookie:ro -v $HOME/Downloads:/home/user/Downloads kry07/firefox:flash %u
 Terminal=false
