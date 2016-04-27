@@ -4,7 +4,7 @@ Name=Thunderbird Mail
 Comment=Send and receive mail with Thunderbird
 GenericName=Mail Client
 Keywords=Email;E-mail;Newsgroup;Feed;RSS
-Exec=xhost +si:localuser:$USER && docker run --rm --env TZ=Europe/Vienna --volume /tmp/.X11-unix:/tmp/.X11-unix --volume /home/etc/thunderbird:/home/user/.thunderbird --volume $HOME/Desktop:/home/user/Desktop kry07/thunderbird %u
+Exec=thunderbird.sh %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
