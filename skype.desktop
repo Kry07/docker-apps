@@ -3,7 +3,7 @@
 Name=
 GenericName=
 Comment=
-Exec=docker start emptyd && docker exec emptyd empty %u
+Exec=docker start skypd
 Icon=
 Terminal=false
 Type=Application

@@ -2,19 +2,19 @@
 
 #### How to get this Container
 ```
-docker pull kry07/none
+docker pull kry07/skype
 ```
 
-#### run none
-see none.sh 
-``` ./none.sh ```
+#### run skype
+see skype.sh 
+``` ./skype.sh ```
 
-#### copy none into your system
+#### copy skype into your system
 ```
 mkdir -p $HOME/.local/share/applications/
 mkdir -p $HOME/.local/share/icons/ 
-cp ./none.desktop $HOME/.local/share/applications/
-docker run --name=getIcon kry07/none sh
-docker cp getIcon:/usr/share/icons/none.png $HOME/.local/share/icons/
+cp ./skype.desktop $HOME/.local/share/applications/
+docker run --name=getIcon kry07/skype sh
+docker cp getIcon:/usr/share/icons/skype.png $HOME/.local/share/icons/
 docker rm getIcon 
 ```
