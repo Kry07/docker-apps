@@ -8,8 +8,8 @@ CONTAINER=empty
 
 # delete image
 if [ "$1" == "--stop" -o "$1" == "-s" ]; then
-	docker stop empty
-	docker rm empty
+	docker stop $CONTAINER
+	docker rm $CONTAINER
 fi
 
 RUNNING=$(docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null)
@@ -18,7 +18,7 @@ RUNNING=$(docker inspect --format="{{ .State.Running }}" $CONTAINER 2> /dev/null
 if [ $? -eq 1 ]; then
 	xhost +si:localuser:$USER
 	docker run \
-		--name emptyd \
+		--name $CONTAINER \
 		--detach \
 		--tty \
 		--device=/dev/sr0 \
@@ -29,11 +29,11 @@ fi
 
 # start server image
 if [ "$RUNNING" == "false" ]; then
-	docker start emptyd
+	docker start $CONTAINER
 fi
 
 # run new instance of image
 if [ "$RUNNING" == "true" ]; then
-	docker exec emptyd
+	docker exec $CONTAINER
 fi
 

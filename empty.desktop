@@ -3,7 +3,7 @@
 Name=
 GenericName=
 Comment=
-Exec=empty.sh
+Exec=docker start emptyd && docker exec emptyd empty %u
 Icon=
 Terminal=false
 Type=Application
