@@ -1,11 +1,10 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
-Version=1.0
 Name=Firefox Web Browser
 Comment=Browse the World Wide Web
 GenericName=Web Browser
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=firefox.sh %u
+Exec=docker start foxd && docker exec foxd firefox --setDefaultBrowser %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
