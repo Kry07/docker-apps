@@ -1,10 +1,11 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
 Name=Firefox Web Flash Browser
+Name=Firefox Web Browser
 Comment=Browse the World Wide Web
 GenericName=Web Flash Browser
 Keywords=Internet;WWW;Browser;Web;Explorer
-Exec=firefox.sh %u
+Exec=docker start foxd && docker exec flashd firefox --setDefaultBrowser %u
 Terminal=false
 X-MultipleArgs=false
 Type=Application
