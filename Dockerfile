@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # list of different languages: https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/latest/README.txt
 ARG THUNDERBIRD_LANG="en-US"
-ENV THUNDERBIRD_VERSION 45.2.0
+ENV THUNDERBIRD_VERSION 45.3.0
 
 RUN set -ex \
 	&& curl -fSL https://download-installer.cdn.mozilla.net/pub/thunderbird/releases/${THUNDERBIRD_VERSION}/linux-x86_64/${THUNDERBIRD_LANG}/thunderbird-${THUNDERBIRD_VERSION}.tar.bz2 -o thunderbird.tar.bz2 \
