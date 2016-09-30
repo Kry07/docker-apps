@@ -7,7 +7,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 # list of different languages: https://download-installer.cdn.mozilla.net/pub/firefox/releases/latest/README.txt
 ARG FIREFOX_LANG="en-US"
-ENV FIREFOX_VERSION 48.0.1
+ENV FIREFOX_VERSION 49.0.1
 
 RUN set -ex \
 	&& curl -fSL https://download-installer.cdn.mozilla.net/pub/firefox/releases/${FIREFOX_VERSION}/linux-x86_64/${FIREFOX_LANG}/firefox-${FIREFOX_VERSION}.tar.bz2 -o firefox.tar.bz2 \
